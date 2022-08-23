@@ -3,6 +3,10 @@ const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
 const fs = require('fs');
 
+const { URLSearchParams } = require('url');
+global.URLSearchParams = URLSearchParams;
+
+
 let rawdata = fs.readFileSync('UScities.json');
 let USCities = JSON.parse(rawdata);
 
