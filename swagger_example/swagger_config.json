@@ -9,6 +9,9 @@
     "paths": {
       "/tasks": {
         "get": {
+          "tags": [
+            "Tasks"
+          ],
           "summary": "Returns a list of tasks.",
           "description": "Optional extended description in Markdown.",
           "produces": [
@@ -27,7 +30,7 @@
       "/task/{taskname}": {
         "get": {
           "tags": [
-            "Task name"
+            "Task specific activity"
           ],
           "summary": "Returns a task by name.",
           "parameters": [
@@ -48,7 +51,7 @@
         },
         "delete": {
           "tags": [
-            "Task name"
+            "Task specific activity"
           ],
           "summary": "Delete a task by name.",
           "parameters": [
@@ -70,6 +73,9 @@
       },
       "/task": {
         "post": {
+          "tags": [
+            "Tasks"
+          ],
           "summary": "Add a task",
           "consumes": [
             "application/x-www-form-urlencoded"
