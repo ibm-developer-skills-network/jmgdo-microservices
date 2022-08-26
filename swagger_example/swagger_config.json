@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-      "Version": "2.0",
+      "version": "2.0",
       "title": "Task Organizer",
       "description": "Organize and maintain tasks"
     },
-    "host": "lavanyas-5000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "host": "<Your application URL>",
     "paths": {
       "/tasks": {
         "get": {
