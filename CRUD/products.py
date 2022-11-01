@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 import json
 from flask_swagger_ui import get_swaggerui_blueprint
 
-app = Flask(__name__)
+app = Flask("Product Server")
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     '/products/docs',
