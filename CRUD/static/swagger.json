@@ -5,9 +5,9 @@
     "title": "Product Info",
     "description": "A sample API that uses Product Information microservice to provide CRUD operations"
   },
-  "host": "127.0.0.1:5000",
+  "host": "--Replace this with your host URL--",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
