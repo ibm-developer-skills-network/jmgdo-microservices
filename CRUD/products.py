@@ -1,12 +1,14 @@
 from flask import Flask, jsonify, request
 import json
 from flask_swagger_ui import get_swaggerui_blueprint
+from flask_cors import CORS
 
 app = Flask("Product Server")
+CORS(app)
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     '/products/docs',
-    'http://127.0.0.1:5000/swagger.json',
+    '<replace your host url>/swagger.json',
     config={'app_name': "Products microservice"}
 )
 
@@ -57,3 +59,5 @@ def remove_product(id):
     product = [x for x in products if x["id"] == id][0]
     products.remove(product)
     return '', 204
+
+app.run(port=5000,debug=True)
