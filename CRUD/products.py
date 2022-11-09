@@ -1,29 +1,15 @@
 from flask import Flask, jsonify, request
 import json
-from flask_swagger_ui import get_swaggerui_blueprint
 from flask_cors import CORS
 
 app = Flask("Product Server")
 CORS(app)
 
-swaggerui_blueprint = get_swaggerui_blueprint(
-    '/products/docs',
-    '<replace your host url>/swagger.json',
-    config={'app_name': "Products microservice"}
-)
-
-app.register_blueprint(swaggerui_blueprint)
 
 products = [
     {'id': 143, 'name': 'Notebook', 'price': 5.49},
     {'id': 144, 'name': 'Black Marker', 'price': 1.99}
 ]
-
-
-@app.route('/swagger.json')
-def static_file():
-    return app.send_static_file("swagger.json")
-
 
 @app.route('/products', methods=['GET'])
 def get_products():
